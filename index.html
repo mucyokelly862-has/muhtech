@@ -79,7 +79,7 @@
     width: 85%;
     max-width: 380px;
     height: calc(100vh - 85px);
-    background: #1e3a8a;
+    
     display: flex;
     flex-direction: column;
     padding: 2rem 1.5rem;
@@ -436,11 +436,51 @@
                 <div><i class="fas fa-cogs"></i> Transmission Systems</div>
             </div>
 
-            <a href="#contact" class="btn-primary" style="margin-top: 20px;">
-                <i class="fas fa-info-circle"></i> Learn More About This Course
-            </a>
-        </div>
-    </div>
+           <!-- Button -->
+<a href="#auto-course-details" class="btn-primary" style="margin-top: 20px;">
+    <i class="fas fa-info-circle"></i> Learn More About This Course
+</a>
+
+<!-- Automobile Technology Course Details -->
+<section id="auto-course-details" style="margin-top: 60px; padding: 40px; background: #f8f9fa; border-radius: 10px; display: none;">
+    <h2>🚗 Automobile Technology Course</h2>
+    <p>This course provides foundational knowledge in <strong>Automobile Technology</strong>.</p>
+    
+    <h3>What You Will Learn:</h3>
+    <ul>
+        <li>Vehicle systems and components (Engine, Transmission, Braking, Suspension, etc.)</li>
+        <li>Automotive diagnostics using OBD scanners</li>
+        <li>Electrical and electronic systems in vehicles</li>
+        <li>Engine repair and maintenance</li>
+        <li>Safety systems (ABS, Airbags, ESP, etc.)</li>
+        <li>Basic welding, metalwork, and auto body repair</li>
+        <li>Introduction to Hybrid and Electric Vehicles</li>
+    </ul>
+
+    <h3>Duration:</h3>
+    <p>6 months (Theory + Practical training)</p>
+
+    <h3>Benefits:</h3>
+    <ul>
+        <li>Recognized Certificate</li>
+        <li>Hands-on workshop practice</li>
+        <li>Better job opportunities in garages, workshops, and automotive companies</li>
+    </ul>
+
+    <a href="#contact" class="btn-primary">Enroll Now →</a>
+</section>
+
+<!-- JavaScript to show/hide the section when button is clicked -->
+<script>
+document.querySelector('a[href="#auto-course-details"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    const details = document.getElementById('auto-course-details');
+    details.style.display = (details.style.display === 'none') ? 'block' : 'none';
+    
+    // Smooth scroll to the section
+    details.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
 </section>
 <!-- Food & Beverage Department Section -->
 <section id="food-beverage" class="section-padding fb-section bg-light">
@@ -1971,16 +2011,15 @@ document.addEventListener('DOMContentLoaded', function() {
             <p><i class="fas fa-envelope"></i> muhatech20@yahoo.com</p>
             <p><i class="fas fa-map-marker-alt"></i> Muhanga, Rwanda</p>
 
-            <div class="footer-socials">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+         <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/250788123456" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
         </div>
-
+      </div>
     </div>
-
+    
     <!-- BOTTOM -->
     <div class="footer-bottom">
         <p>© 2026 Muhanga Technical Center. All Rights Reserved.</p>

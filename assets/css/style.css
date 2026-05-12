@@ -26,7 +26,7 @@
 body {
     font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
     color: var(--text-dark);
-    background-image: url('../image/gardern.jpeg');
+    background-image: url('../image/student\ MTC.png');
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -1416,4 +1416,73 @@ nav a.active {
             transform: translateY(-2px);
         }
         
-        
+        /* Container styling */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Base style for all icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #f0f0f0; /* Neutral background before hover */
+  color: #333; /* Icon color */
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Hover Effects --- */
+
+.social-icon:hover {
+  transform: translateY(-5px); /* Lifts the icon up */
+  color: #fff; /* Changes icon to white on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deepens shadow */
+}
+
+/* Specific Brand Colors on Hover */
+
+.instagram:hover {
+  /* Instagram Gradient */
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.facebook:hover {
+  background-color: #1877F2;
+}
+
+.twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.whatsapp:hover {
+  background-color: #25D366;
+}/* Iki nicyo gice gituma ziza zitambitse */
+.social-links {
+  display: flex;          /* Bituma ibintu biza mu murongo umwe utambitse */
+  flex-direction: row;    /* Bitegeka ko biba mu rukurikirane rw'ubutambike */
+  justify-content: center; /* Bituma ziza hagati mu rupapuro */
+  gap: 20px;              /* Bitanga umwanya (space) hagati y'imbuga imwe n'indi */
+  padding: 15px;
+}
+
+/* Kunoza isura y'udushushanyo */
+.social-icon {
+  text-decoration: none;
+  font-size: 24px;         /* Ingano y'agashushanyo */
+  transition: transform 0.3s ease; /* Bituma hover igenda neza */
+}
+
+/* Iyo cursor ihageze */
+.social-icon:hover {
+  transform: scale(1.2);   /* Bituma kabyibuha gato iyo ugejejeho cursor */
+}

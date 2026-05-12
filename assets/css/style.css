@@ -1486,3 +1486,48 @@ nav a.active {
 .social-icon:hover {
   transform: scale(1.2);   /* Bituma kabyibuha gato iyo ugejejeho cursor */
 }
+/* 1. INSTANT TEXT RENDERING
+   Bituma amagambo agaragara ako kanya hatabayeho gutegereza font zo hanze */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. LAYOUT STABILITY 
+   Bituma browser itagora ishaka kumenya uburebure bw'ibintu (LCP Improvement) */
+img {
+    content-visibility: auto;
+    aspect-ratio: attr(width) / attr(height);
+}
+
+/* 3. SECTION LOADING OPTIMIZATION 
+   Ibwira browser kureba gusa ibice biri kugaragara imbere y'amaso (Viewport) */
+section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+}
+
+/* 4. GPU ACCELERATION (Hardware Speed)
+   Bituma animations zikoresha Graphic Card aho gukoresha Processor */
+.sidebar, .hamburger {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+
+/* 5. RENDERING CONTAINMENT 
+   Ibuza browser gusubira inyuma ngo yongere ipime page yose iyo hari agace kamwe gahindutse */
+.main-header {
+    contain: layout;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 6. REDUCE PAINT CYCLES */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
